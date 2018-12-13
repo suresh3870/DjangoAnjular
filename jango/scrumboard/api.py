@@ -6,10 +6,10 @@ from .models import List, Card
 
 
 class ListApi(ListAPIView):
-    queryset = List.object.all()
-    serilize_class = ListSerializer
+    queryset = List.objects.all()
+    serilizer_class = ListSerializer
 
 
 class CardApi(ListAPIView):
-        queryset = List.object.all()
-        serilize_class = CardSerializer
+        queryset = List.objects.all()
+        serilizer_class = CardSerializer
