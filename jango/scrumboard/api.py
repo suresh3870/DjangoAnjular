@@ -9,5 +9,5 @@ class ListApi(ListAPIView):
 
 
 class CardApi(ListAPIView):
-        queryset = Card.objects.all()
-        serializer_class = CardSerializer()
+    queryset = Card.objects.all()
+    serializer_class = CardSerializer
