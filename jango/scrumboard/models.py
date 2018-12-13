@@ -9,9 +9,9 @@ class List(models.Model):
 
 
 class Card(models.Model):
-    title = models.CharField(max_length=80)
-    descripation = models.TextField(blank=True)
-    listId = models.ForeignKey(List, on_delete=models.CASCADE, related_name="cards")
+    title = models.CharField(max_length=50)
+    description = models.TextField(blank=True)
+    list = models.ForeignKey(List, related_name="cards", on_delete=models.CASCADE)
     story_points = models.IntegerField(null=True, blank=True)
     business_value = models.IntegerField(null=True, blank=True)
 
