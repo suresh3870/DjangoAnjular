@@ -19,4 +19,5 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^scrumboard/', include('scrumboard.url')),
+    url(r'^auth_api/', include('auth_api.urls')),
 ]
