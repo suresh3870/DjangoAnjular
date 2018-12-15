@@ -66,6 +66,7 @@ virtualenv venv
 source venv/bin/activate
 cd jango
 pip install -r requirements.txt
+python manage.py collectstatic
 sudo systemctl daemon-reload
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
