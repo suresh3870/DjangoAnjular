@@ -12,6 +12,9 @@ pip install -r requirements.txt
 pip install django bcrypt django-extensions
 pip install gunicorn
 cd jango
+
+#change the IP4 and add from as per your EC2
+for me it was- ALLOWED_HOSTS = ['3.16.167.247']
 python manage.py collectstatic
 #gunicorn --bind 0.0.0.0:8000 jango.wsgi:application
 
