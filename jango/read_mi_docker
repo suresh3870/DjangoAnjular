@@ -1,0 +1,23 @@
+#Follow video to install project on Window/Ubuntu
+#https://www.londonappdeveloper.com/dockerizing-a-django-rest-framework-project/
+
+#Windows Build steps:
+
+git clone https://github.com/suresh3870/DjangoAnjular.git
+docker-compose run web python manage.py migrate
+docker-compose build
+#See all docker images
+docker images
+# To see all container (stoppped/Running)
+docker ps -a
+docker containers ls -all
+# to running container
+docker containers ls
+
+#run a webserver as a container
+#https://docs.docker.com/docker-for-windows/#explore-the-application
+
+C:\Users\MS\Desktop\Docker\DjangoAnjular\jango>docker run --interactive --tty jango_web bash
+root@682ac0151456:/code# hostname
+682ac0151456
+root@682ac0151456:/code#exit
