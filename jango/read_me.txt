@@ -1,4 +1,4 @@
-----Step to install Project on EC2---
+----Step to install Project on EC2 First time---
 
 sudo apt-get update
 sudo apt-get install python3-pip python3-dev nginx git
@@ -51,4 +51,22 @@ python manage.py collectstatic
 sudo ln -s /etc/nginx/sites-available/jango /etc/nginx/sites-enabled
 sudo nginx -t
 sudo rm /etc/nginx/sites-enabled/default
+sudo service nginx restart
+
+
+
+---Next time, can be used in Jenkins----------
+--Jenkins steps---
+sudo service nginx stop
+sudo systemctl stop gunicorn
+rm -rf DjangoAnjular
+git clone https://github.com/suresh3870/DjangoAnjular.git
+cd DjangoAnjular
+virtualenv venv
+source venv/bin/activate
+cd jango
+pip install -r requirements.txt
+sudo systemctl daemon-reload
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
 sudo service nginx restart
