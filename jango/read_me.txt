@@ -55,8 +55,14 @@ sudo service nginx restart
 
 
 
----Next time, can be used in Jenkins----------
---Jenkins steps---
+-------- Auto deploy Script on EC2 Ubuntu machine-------
+#!/bin/bash
+####################################
+#
+# Script to deploy on server.
+#
+####################################
+
 sudo service nginx stop
 sudo systemctl stop gunicorn
 rm -rf DjangoAnjular
@@ -66,7 +72,6 @@ virtualenv venv
 source venv/bin/activate
 cd jango
 pip install -r requirements.txt
-python manage.py collectstatic
 sudo systemctl daemon-reload
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
