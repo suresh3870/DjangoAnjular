@@ -1,3 +1,17 @@
+---How to run locally-----
+
+set debug=True and false when you run on server
+
+--Windows
+
+git clone https://github.com/suresh3870/DjangoAnjular.git   ---- Make sure git is installed on your local machine.
+cd DjangoAnjular
+virtualenv venv     ---- make sure python3 and virtualenv is installed in your local
+cd jango
+Scripts\activate
+pip install -r requirements.txt
+
+
 ----Step to install Project on EC2 First time---
 
 sudo apt-get update
